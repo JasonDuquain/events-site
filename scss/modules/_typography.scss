@@ -1,0 +1,36 @@
+
+
+
+.sect_hdg__wrap {
+    position: relative;
+    padding: .6em 0;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: rgba(gray, .4);
+        top: 100%;
+    }
+    
+    &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 8em;
+        background-color: $aqua;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+}
+
+.sect_hdg {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: $mainblue;
+    text-align: center;
+    letter-spacing: 1px;
+}
