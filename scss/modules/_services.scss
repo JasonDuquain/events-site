@@ -4,8 +4,74 @@
     margin-right: auto;
     max-width: 1200px;
     
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1.5em;
+        margin-top: 4em;
+    }
+    
     &__block {
-        height: 80vh;
+        padding: 1.5em;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $lightgray;
+        border-radius: 3px;
+        
+        &:hover .services__border {
+            border-color: $aqua;
+        }
+    }
+    
+    &__anch {
+        color: $aqua;
+        font-size: 2.6em;
+        display: inline-block;
+        margin-bottom: .3em;
+        
+        &.round { //testing using round icon
+            align-self: center;
+            border-radius: 50%;
+            border: 5px solid $aqua;
+            background-color: $mainblue;
+            color: $aqua;
+            height: 2.2em;
+            width: 2.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -1.7em;
+            margin-bottom: 1em;
+        }
+    }
+    
+    &__icon {
+        
+    }
+    
+    &__border {
+        height: 4px;
+        border-top: 1px solid $lightgray;
+        border-bottom: 1px solid $lightgray;
+        margin-bottom: 1em;
+        transition: border-color 200ms ease-out;
+    }
+    
+    &__hdg {
+        font-size: 1.3em;
+        font-weight: 300;
+        margin-bottom: .8em;
+    }
+    
+    
+    &__para {
+        line-height: 1.5;
+        margin-bottom: 2em;
+    }
+    
+    &__btn {
+        align-self: center;
+        margin-top: auto;
     }
 }
 

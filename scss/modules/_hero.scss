@@ -40,6 +40,7 @@
 }
 
 .btn:link, .btn:visited {
+    font-size: .8em;
     text-transform: uppercase;
     display: inline-block;
     color: #fff;
@@ -62,7 +63,7 @@
     transform: translateY(-50%);
     background-color: #fff;
     display: flex;
-    padding: 3em;
+    padding: 2em;
     text-align: center;
     
     &__block {
