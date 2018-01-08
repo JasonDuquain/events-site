@@ -5,14 +5,17 @@
     max-width: 1200px;
     
     &__container {
-       display: grid;
+        display: grid;
         grid-template-columns: 1.5fr 2fr;
         grid-template-rows: auto;
-        grid-gap: 1em;
-        
-        & > * {
-            border: 2px solid red;
-        }
+        grid-gap: .5em 1.5em;
+        margin-top: 4em;
+    }
+    
+    &__hdg {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: .9em;
     }
     
     &__hdg--one {
@@ -21,7 +24,7 @@
     }
     
     &__block {
-        
+        padding: .5em .5em 1.5em .5em;
         &--one {
             grid-column: 1 / 2;
             grid-row: 2 / 3;
@@ -41,9 +44,18 @@
     
     &__block-hdg {
         
+        
+        &-span {
+            color: $aqua;
+        }
+        
     }
     
     &__para {
+       font-size: .8em;
+       padding: 1.2em 1.5em 0 1em; 
+        
+        pointer-events: none;
         
     }
     
@@ -74,36 +86,86 @@
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         //z-index: 55;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     
     &__icon {
-        
+        font-size: 2.5em !important;
+        color: $aqua;
     }
     
     &__list {
+       align-self: flex-start; 
         
     }
     
     &__item {
+        transition: transform 300ms ease-out;
+        
+        &:not(:last-of-type) {
+            margin-bottom: .5em;
+        }
+        
+        &:hover {
+            transform: translateX(5px);
+        }
         
     }
     
     &__anch {
-        
+       color: #fff;
+    }
+    
+    &__arrow {
+        color: $aqua;
     }
     
     &__accordion {
-        
+        padding: 1em;
+        border: 1px solid $lightgray;
     }
     
     &__accordion-item {
+        padding-bottom: 2em;
+        height: 0;
+        overflow: hidden;
+        transition: height 500ms ease-out;
         
+        &.js--visible {
+            height: auto;
+            
+            & .about__accordion-hdg::after {
+                content:"\2014";
+            }
+        }
+        
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $lightgray;
+            margin-bottom: 1em;
+        }
     }
     
     &__accordion-hdg {
+        pointer-events: none;
+        position: relative;
+        font-weight: 300;
+        
+        &::after {
+            content: "+";
+            position: absolute;
+            top: 0;
+            right: 1em;
+            color: $aqua;
+        }
+        
         
     }
     
     
     
 }
+
+
