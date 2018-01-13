@@ -104,13 +104,16 @@
     
     &__item {
         transition: transform 300ms ease-out;
+        padding: .6em 1.1em;
+        border-radius: 3px;
         
         &:not(:last-of-type) {
             margin-bottom: .5em;
         }
         
         &:hover {
-            transform: translateX(5px);
+            transform: translateX(6px);
+            background-color: rgba(#fff, .1);
         }
         
     }
